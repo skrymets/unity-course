@@ -18,4 +18,13 @@ public class LevelManager : MonoBehaviour
 		Application.Quit();
 	}
 
+	public void PlayerWin ()
+	{
+		SceneManager.LoadScene("PlayerWin");
+	}
+
+	public void PlayerLose ()
+	{
+		SceneManager.LoadScene("PlayerLose");
+	}
 }
