@@ -14,7 +14,7 @@ public class NumberWizard : MonoBehaviour {
 	public LevelManager levelManager;
 
 	private int currentGuesses = 0;
-	private int min = 0;
+	private int min = 1;
 	private int max = 1000;
 
 	void Start() {

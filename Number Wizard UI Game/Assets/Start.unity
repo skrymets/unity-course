@@ -142,8 +142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 0, y: 325}
+  m_AnchoredPosition: {x: 0, y: -8}
+  m_SizeDelta: {x: 0, y: 399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &179006546
 MonoBehaviour:
@@ -176,9 +176,9 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Think a number in the range \nbetween 1 and 1000\n\nPress \"Start\" button
-    when ready..."
+    m_LineSpacing: 1.2
+  m_Text: "Think of a number in the range \nbetween 1 and 1000\n\nPress \"Start\"
+    button when ready..."
 --- !u!222 &179006547
 CanvasRenderer:
   m_ObjectHideFlags: 0
