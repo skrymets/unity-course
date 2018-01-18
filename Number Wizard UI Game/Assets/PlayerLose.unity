@@ -133,15 +133,15 @@ RectTransform:
   m_GameObject: {fileID: 179006544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 451545338}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
-  m_SizeDelta: {x: 0, y: 199}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: -640, y: 199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &179006546
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 71262de9558587f4090a4546e14dba05, type: 2}
   m_Color: {r: 0.9338235, g: 0.403, b: 0.047, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -163,7 +163,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c2042cd066e76b14fbac2f3b032ccc6b, type: 2}
+    m_Font: {fileID: 12800000, guid: bfabdc37cc6e5054a8eef3fc01d0e301, type: 2}
     m_FontSize: 0
     m_FontStyle: 1
     m_BestFit: 1

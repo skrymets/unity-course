@@ -8,6 +8,8 @@ public class NumberWizard : MonoBehaviour {
 
 	public int guesses = 5;
 	public Text guessMessage;
+	public Text guessesLeft;
+
 
 	public LevelManager levelManager;
 
@@ -21,8 +23,9 @@ public class NumberWizard : MonoBehaviour {
 
 	public void NextGuess() {
 		guesses--;
+		guessesLeft.text = "Remaining Attempts: " + guesses.ToString();
 		currentGuesses = Random.Range (min, max + 1);
-		guessMessage.text = "Is your number = " + currentGuesses + "?";
+		guessMessage.text = currentGuesses.ToString();
 	}
 
 	public void GuessLower() {
