@@ -29,7 +29,7 @@ public class NumberWizard : MonoBehaviour {
 	}
 
 	public void GuessLower() {
-		max = currentGuesses;
+		max = currentGuesses - 1;
 		if (guesses > 0) {
 			NextGuess ();
 		} else {
@@ -38,7 +38,7 @@ public class NumberWizard : MonoBehaviour {
 	}
 
 	public void GuessHigher() {
-		min = currentGuesses;
+		min = currentGuesses + 1;
 		if (guesses > 0) {
 			NextGuess ();
 		} else {

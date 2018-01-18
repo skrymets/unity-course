@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Number Wizard UI Game", "Assembly-CSharp.csproj", "{AF8A2551-4F51-A73E-75DC-921046E82312}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Number Wizard UI Game", "Number Wizard UI Game.csproj", "{CC6B0267-D7BB-F269-3268-1A7D76706AA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AF8A2551-4F51-A73E-75DC-921046E82312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF8A2551-4F51-A73E-75DC-921046E82312}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF8A2551-4F51-A73E-75DC-921046E82312}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF8A2551-4F51-A73E-75DC-921046E82312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6B0267-D7BB-F269-3268-1A7D76706AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6B0267-D7BB-F269-3268-1A7D76706AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6B0267-D7BB-F269-3268-1A7D76706AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6B0267-D7BB-F269-3268-1A7D76706AA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
