@@ -41,3 +41,8 @@ Icon?
 ehthumbs.db
 [Tt]humbs.db
 [Dd]esktop.ini
+
+# ===================================== # 
+# Unwanted source models, media, etc.   #
+# ===================================== #
+Models/
