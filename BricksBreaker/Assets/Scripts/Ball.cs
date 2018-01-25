@@ -29,7 +29,7 @@ public class Ball : MonoBehaviour
 			if (Input.GetMouseButtonDown(0))
 			{
 				gameStarted = true;
-				this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-5f, 5.01f), 20f);
+				this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-5f, 5.01f), 12f);
 			}
 		}
 

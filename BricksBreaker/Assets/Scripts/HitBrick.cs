@@ -7,6 +7,8 @@ public class HitBrick : MonoBehaviour
 
 	public int maxHits;
 
+	public int prize;
+
 	public int currentHit = 0;
 
 	private LevelManager levelManager;
@@ -26,11 +28,14 @@ public class HitBrick : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		currentHit++;
-		SimulateWin();
-	}
 
-	void SimulateWin()
-	{
-		levelManager.LoadNextLevel();
+		if (currentHit == maxHits) {
+			Destroy(gameObject);
+
+			// If there is no bricks left on this scene - go to the next level.
+			if (FindObjectsOfType<HitBrick>().GetLength(0) == 0) {
+				levelManager.LoadNextLevel();
+			}
+		}
 	}
 }
