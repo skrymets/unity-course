@@ -20,6 +20,11 @@ public class Paddle : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		collision.gameObject.GetComponent<Rigidbody2D>().velocity *= 1.1f;
+		/** 
+		Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+		rb.velocity = new Vector2(
+				rb.velocity.x * Random.Range(0.8f, 1.2f), 
+				rb.velocity.y * Random.Range(0.8f, 1.2f)
+		); */
 	}
 }

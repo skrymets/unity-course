@@ -1,24 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MusicPlayer : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
 
-	static MusicPlayer _instance;
+	static ScoreManager _instance;
 
-	public static MusicPlayer instance
+	public static ScoreManager instance
 	{
 		get
 		{
 			if (_instance == null)
 			{
-				_instance = GameObject.FindObjectOfType<MusicPlayer>();
-				if (_instance == null)
+				_instance = GameObject.FindObjectOfType<ScoreManager>();
+				if (_instance != null)
 				{
-					Debug.LogWarning("Player not found");
-				}
-				else {
 					GameObject.DontDestroyOnLoad(_instance.gameObject);
 				}
 			}

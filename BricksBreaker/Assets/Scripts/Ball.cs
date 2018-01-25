@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-	public Paddle paddle;
+	private Paddle paddle;
 
 	private Vector3 paddleToBallVector;
 
@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		paddle = FindObjectOfType<Paddle>();
 		paddleToBallVector = this.transform.position - paddle.transform.position;
 	}
 
@@ -28,7 +29,7 @@ public class Ball : MonoBehaviour
 			if (Input.GetMouseButtonDown(0))
 			{
 				gameStarted = true;
-				this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-5f, 5.01f), 30f);
+				this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-5f, 5.01f), 20f);
 			}
 		}
 

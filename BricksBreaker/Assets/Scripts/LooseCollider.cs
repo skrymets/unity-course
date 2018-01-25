@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LooseCollider : MonoBehaviour {
 
-	public LevelManager levelManager;
+	private LevelManager levelManager;
 
 	// Use this for initialization
 	void Start () {
-		
+		levelManager = FindObjectOfType<LevelManager>();
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,8 @@ public class LooseCollider : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		Debug.Log("Collision enter");
+		levelManager.PlayerLose();
+		// Debug.Log("Collision enter");
 	}
 
 }

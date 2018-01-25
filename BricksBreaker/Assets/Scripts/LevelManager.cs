@@ -12,18 +12,24 @@ public class LevelManager : MonoBehaviour
 		SceneManager.LoadScene(levelName);
 	}
 
+	public void LoadNextLevel()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+	}
+
 	public void RequestQuit()
 	{
 		Debug.Log("Quit requested");
 		Application.Quit();
 	}
 
-	public void PlayerWin ()
+	public void PlayerWin()
 	{
 		SceneManager.LoadScene("PlayerWin");
 	}
 
-	public void PlayerLose ()
+	public void PlayerLose()
 	{
 		SceneManager.LoadScene("PlayerLose");
 	}
