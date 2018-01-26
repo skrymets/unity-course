@@ -5,8 +5,6 @@ using UnityEngine;
 public class HitBrick : MonoBehaviour
 {
 
-	public int maxHits;
-
 	public int prize;
 
 	public int currentHit = 0;
@@ -32,7 +30,7 @@ public class HitBrick : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		currentHit++;
-
+		int maxHits = hitSprites.Length + 1;
 		if (currentHit >= maxHits)
 		{
 			Destroy(gameObject);

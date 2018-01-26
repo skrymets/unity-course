@@ -18,6 +18,11 @@ public class Paddle : MonoBehaviour
 		transform.position = new Vector3(mousePosInBlocks, transform.position.y);
 	}
 
+	void OnCollisionStay2D(Collision2D collision)
+	{
+		// collision.rigidbody.velocity
+	}
+
 	void OnCollisionEnter2D(Collision2D collision)
 	{
 		/** 
