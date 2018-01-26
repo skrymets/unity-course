@@ -21,8 +21,8 @@ public class LooseCollider : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		levelManager.PlayerLose();
-		// Debug.Log("Collision enter");
+		// levelManager.PlayerLose();
+		Debug.Log("Player has lost!");
 	}
 
 }

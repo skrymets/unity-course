@@ -35,5 +35,16 @@ public class Ball : MonoBehaviour
 
 	}
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 turbulence = new Vector2(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
+
+        if (gameStarted)
+        {
+            GetComponent<AudioSource>().Play();
+            GetComponent<Rigidbody2D>().velocity += turbulence;
+        }
+    }
+
 }
 

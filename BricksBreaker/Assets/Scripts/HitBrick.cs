@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class HitBrick : MonoBehaviour
 {
-
 	public int prize;
-
-	public int currentHit = 0;
 
 	public Sprite[] hitSprites;
 
-	private LevelManager levelManager;
+    public AudioClip crackAudio;
+
+	private int currentHit = 0;
+    private LevelManager levelManager;
 	private ScoreManager scoreManager;
 
 	// Use this for initialization
@@ -33,12 +33,13 @@ public class HitBrick : MonoBehaviour
 		int maxHits = hitSprites.Length + 1;
 		if (currentHit >= maxHits)
 		{
-			Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(crackAudio, this.transform.position);
 
 			scoreManager.Earn(prize);
+            Destroy(gameObject);
 
-			// If there is no bricks left on this scene - go to the next level.
-			if (FindObjectsOfType<HitBrick>().Length == 0)
+            // If there is no bricks left on this scene - go to the next level.
+            if (FindObjectsOfType<HitBrick>().Length == 0)
 			{
 				levelManager.LoadNextLevel();
 			}
