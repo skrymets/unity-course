@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class HitBrick : MonoBehaviour
 {
+	public bool invincible;
 	public int prize;
 
 	public Sprite[] hitSprites;
+
+	public GameObject smoke;
 
     public AudioClip crackAudio;
 
@@ -29,6 +32,11 @@ public class HitBrick : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
+		if (invincible) { 
+			AudioSource.PlayClipAtPoint(crackAudio, this.transform.position);
+			return;
+		}
+
 		currentHit++;
 		int maxHits = hitSprites.Length + 1;
 		if (currentHit >= maxHits)
@@ -36,6 +44,8 @@ public class HitBrick : MonoBehaviour
             AudioSource.PlayClipAtPoint(crackAudio, this.transform.position);
 
 			scoreManager.Earn(prize);
+			GameObject smokeInstance = Instantiate(smoke, gameObject.transform.position, Quaternion.identity) as GameObject;
+			Destroy(smokeInstance, 2);
             Destroy(gameObject);
 
             // If there is no bricks left on this scene - go to the next level.

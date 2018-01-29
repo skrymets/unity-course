@@ -29,22 +29,21 @@ public class Ball : MonoBehaviour
 			if (Input.GetMouseButtonDown(0))
 			{
 				gameStarted = true;
-				this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-5f, 5.01f), 12f);
+				this.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-5f, 5.01f), 15f);
 			}
 		}
 
 	}
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Vector2 turbulence = new Vector2(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (gameStarted)
+		{
+			Vector2 tweak = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(0f, 2.5f));
+			GetComponent<Rigidbody2D>().velocity += tweak;
 
-        if (gameStarted)
-        {
-            GetComponent<AudioSource>().Play();
-            GetComponent<Rigidbody2D>().velocity += turbulence;
-        }
-    }
+			GetComponent<AudioSource>().Play();
+		}
+	}
 
 }
-
