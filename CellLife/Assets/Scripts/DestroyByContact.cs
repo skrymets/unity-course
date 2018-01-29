@@ -5,23 +5,30 @@ using UnityEngine;
 public class DestroyByContact : MonoBehaviour
 {
 
-	public GameObject asteroidExplosion;
+	public GameObject explosion;
+	public AudioClip explosionAudio;
 
-	void OnTriggerEnter (Collider other)
+	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag ("Boundaries")) {
+		if (other.gameObject.CompareTag("Boundaries"))
+		{
 			return;
 		}
 
-		if (other.gameObject.CompareTag ("LaserShot")) {
-			Instantiate(asteroidExplosion, transform.position, transform.rotation);
+		if (other.gameObject.CompareTag("LaserShot"))
+		{
+			GameObject particles = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
+			Destroy(particles, 5);
 		}
 
-		if (other.gameObject.CompareTag ("Player")) {
-			Instantiate(asteroidExplosion, transform.position, transform.rotation);
+		if (other.gameObject.CompareTag("Player"))
+		{
+			GameObject particles = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
+			Destroy(particles, 5);
 		}
 
-		Destroy (other.gameObject);
+		AudioSource.PlayClipAtPoint(explosionAudio, this.transform.position);
+		Destroy(other.gameObject);
 		Destroy(gameObject);
 	}
 
