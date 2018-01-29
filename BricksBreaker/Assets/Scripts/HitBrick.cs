@@ -5,10 +5,9 @@ using UnityEngine;
 public class HitBrick : MonoBehaviour
 {
 
+	public bool invincible;
 	public int prize;
-
 	public int currentHit = 0;
-
 	public Sprite[] hitSprites;
 
 	private LevelManager levelManager;
@@ -29,6 +28,8 @@ public class HitBrick : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
+		if (invincible) return;
+
 		currentHit++;
 		int maxHits = hitSprites.Length + 1;
 		if (currentHit >= maxHits)

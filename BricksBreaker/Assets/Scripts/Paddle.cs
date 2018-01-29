@@ -5,31 +5,30 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
 
+	public bool AutoPlay;
+
+	private Ball ball;
+
 	// Use this for initialization
 	void Start()
 	{
+		ball = FindObjectOfType<Ball>();
 
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		float mousePosInBlocks = Mathf.Clamp(Input.mousePosition.x / Screen.width * 20, 0.667f, 19.333f);
-		transform.position = new Vector3(mousePosInBlocks, transform.position.y);
+		if (AutoPlay)
+		{
+			// float autoPosInBlocks = Mathf.Clamp( / Screen.width * 20, 0.667f, 19.333f);
+			transform.position = new Vector3(ball.transform.position.x, 1.0f);
+		}
+		else
+		{
+			float mousePosInBlocks = Mathf.Clamp(Input.mousePosition.x / Screen.width * 20, 0.667f, 19.333f);
+			transform.position = new Vector3(mousePosInBlocks, 1.0f);
+		}
 	}
 
-	void OnCollisionStay2D(Collision2D collision)
-	{
-		// collision.rigidbody.velocity
-	}
-
-	void OnCollisionEnter2D(Collision2D collision)
-	{
-		/** 
-		Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-		rb.velocity = new Vector2(
-				rb.velocity.x * Random.Range(0.8f, 1.2f), 
-				rb.velocity.y * Random.Range(0.8f, 1.2f)
-		); */
-	}
 }
