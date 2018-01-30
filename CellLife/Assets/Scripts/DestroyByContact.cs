@@ -18,13 +18,13 @@ public class DestroyByContact : MonoBehaviour
 		if (other.gameObject.CompareTag("LaserShot"))
 		{
 			GameObject particles = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
-			Destroy(particles, 5);
+			Destroy(particles, 2);
 		}
 
 		if (other.gameObject.CompareTag("Player"))
 		{
 			GameObject particles = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
-			Destroy(particles, 5);
+			Destroy(particles, 2);
 		}
 
 		AudioSource.PlayClipAtPoint(explosionAudio, this.transform.position);
