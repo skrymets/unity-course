@@ -13,7 +13,7 @@ public class Asteroid : MonoBehaviour
 	{
 
 		rb = GetComponent<Rigidbody> ();
-		rb.velocity = transform.up * -speed;
+		rb.velocity =  Vector3.down * speed;
 	}
 
 }
